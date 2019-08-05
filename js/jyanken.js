@@ -22,7 +22,7 @@ window.onload = function() {
   saveBtn.addEventListener("click", function() {
     // 空欄でない場合のみクッキー保存
     if (playerName.value != "") {
-      document.cookie = "playerName=" + playerName.value;
+      document.cookie = playerName.value;
       saveText.innerHTML = "名前を「" + playerName.value + "」として、クッキーに保存しました";
     } else {
       saveText.innerHTML = "空欄は保存できません";
