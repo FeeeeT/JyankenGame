@@ -52,7 +52,11 @@ window.onload = function() {
   if (document.cookie != "") {
     playerName.value = document.cookie; //クッキーに保存した名前を設定
   }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> f66cb09509cd8ea75543145944f4bc39a9359fcc
   var turn = document.getElementById("turn"); //ターン
   var turnNum = 1;
   var damage = document.getElementById("damage"); //そのターンのダメージ
