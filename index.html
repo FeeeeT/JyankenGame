@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>じゃんけんバトル</title>
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <!-- FontAwesome -->
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  <!-- GoogleFonts -->
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Sans+JP&display=swap" rel="stylesheet">
+  <!-- JavaScript -->
+  <script src="js/jyanken.js" charset="utf-8"></script>
+</head>
+
+<body>
+  <h2>じゃんけんバトル</h2>
+  <div class="container">
+    <!-- 画面上の情報 -->
+    <div class="head flex">
+      <!-- 敵の情報 -->
+      <div class="enemy column">
+        <input id="enemy-name" type="text" value="敵" readonly>
+        <meter id="enemyhp-meter" value="10" min="0" max="10" low="5" high="7" optimum="8"></meter><br>
+        <p>HP：<span id="enemyhp">10</span></p>
+      </div>
+      <!-- ターン系情報 -->
+      <div class="point column">
+        <p>ターン: <span id="turn">0</span></p>
+        <br>
+        <p>このターン</p>
+        <p id="damage">0</p>
+        <p>ダメージ</p>
+      </div>
+      <!-- プレイヤー情報 -->
+      <div class="player column">
+        <input id="player-name" type="text" value="名無し" maxlength="7">
+        <meter id="playerhp-meter" value="10" min="0" max="10" low="5" high="7" optimum="8"></meter><br>
+        <p>HP：<span id="playerhp">10</span></p>
+      </div>
+    </div>
+    <!-- 手の表示とボタン -->
+    <div class="jyanken flex">
+      <!-- 敵の手 -->
+      <div id="enemy-pon" class="enemy column"></div>
+      <!-- ジャンケンボタン -->
+      <div id="jyanken-btn" class="btn column">
+        <button type="button" id="gu"><i class="fas fa-hand-rock"></i></button>
+        <button type="button" id="cyoki"><i class="fas fa-hand-peace"></i></button>
+        <button type="button" id="pa"><i class="fas fa-hand-paper"></i></button>
+      </div>
+      <!-- プレイヤーの手 -->
+      <div id="player-pon" class="player column"></div>
+    </div>
+    <!-- ログ用テキストエリア -->
+    <textarea id="log" name="log" rows="16" cols="50" placeholder="■■---------------------------ルール---------------------------■■
+
+じゃんけんに勝って、相手のHPを0にしましょう！
+
+じゃんけんに勝った方が、
+そのターン、相手にダメージを与えます。
+
+ダメージは、ターン毎にランダムで決まります。（1～4）
+
+(プレイヤーネームは、ゲーム開始前のみ変えられます。)
+
+■■---------------------------------------------------------------■■
+
+『スタート』でゲームを開始します。" readonly></textarea>
+  </div>
+  <!-- ボタン一覧 -->
+  <div>
+    <!-- スタートボタン -->
+    <button type="button" class="under-btn" id="start">スタート</button>
+    <!-- リセットボタン -->
+    <button type="button" class="under-btn" id="reset">リセット</button>
+  </div>
+  <div>
+    <!-- 名前保存ボタン -->
+    <button type="button" class="under-btn" id="save">名前保存</button>
+    <!-- 名前保存テキスト -->
+    <p id="save-text"></p>
+  </div>
+</body>
+
+</html>

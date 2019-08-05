@@ -1,0 +1,93 @@
+* {
+  text-align: center;
+  font-family: 'Noto Sans', 'Noto Sans JP', sans-serif;
+}
+
+body {
+  background-color: #ffe0ac;
+  color: #222;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+meter {
+  width: 200px;
+}
+
+.container {
+  margin: auto;
+  width: 800px;
+  border: solid 2px black;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  background-color: #fff;
+}
+
+.center {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.column {
+  flex: 1;
+  margin: auto;
+}
+
+.point p {
+  font-size: 20px;
+}
+
+.jyanken {
+  font-size: 100px;
+  color: white;
+}
+
+.btn .fas {
+  font-size: 40px;
+}
+
+#player-name, #enemy-name {
+  border: 0;
+  font-size: 1rem;
+  border: solid 1px #222;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+#player-name {
+  background-color: #70b7ff;
+}
+
+#enemy-name {
+  background-color: #ff8585;
+}
+
+#damage {
+  width: 70px;
+  height: 70px;
+  margin: auto;
+  font-size: 50px;
+  border: dashed 2px #222;
+  border-radius: 50%;
+}
+
+#log {
+  margin-top: 20px;
+  padding: 5px;
+  text-align: left;
+  border: solid 1px #222;
+}
+
+.under-btn {
+  width: 200px;
+  margin: 3px;
+  font-size: 30px;
+}
