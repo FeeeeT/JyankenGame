@@ -22,7 +22,7 @@ window.onload = function() {
   saveBtn.addEventListener("click", function() {
     // 空欄でない場合のみクッキー保存
     if (playerName.value != "") {
-      document.cookie = playerName.value;
+      document.cookie = "playerName=" + playerName.value;
       saveText.innerHTML = "名前を「" + playerName.value + "」として、クッキーに保存しました";
     } else {
       saveText.innerHTML = "空欄は保存できません";
@@ -49,7 +49,9 @@ window.onload = function() {
   var playerHpMeter = document.getElementById("playerhp-meter"); //自HPバー
   var playerHpNum = 10;
   var playerName = document.getElementById("player-name"); //自名
-  playerName.value = document.cookie; //クッキーに保存した名前を設定
+  if (document.cookie != "") {
+    playerName.value = document.cookie; //クッキーに保存した名前を設定
+  }
 
   var turn = document.getElementById("turn"); //ターン
   var turnNum = 1;
